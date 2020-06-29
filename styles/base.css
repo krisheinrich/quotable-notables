@@ -1,0 +1,40 @@
+/* use border-box by default, globally */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  
+  /* consistent line spacing (https://drafts.csswg.org/css-inline-3/#line-sizing-property) */
+  line-sizing: normal; 
+}
+
+body {
+  /* remove the tiny space around the edge of the page */
+  margin: 0;
+  
+  /* extend body to full viewport height */
+  min-height: 100%;
+}
+
+img {
+  /* limit width of images to their containers */
+  max-width: 100%;
+  
+  /* autoscale images based on width, preserving aspect ratio */
+  height: auto;
+  
+  /* prevent small gap below images */
+  vertical-align: bottom;
+}
+
+/* no default UA margin-top for text elements */
+h1, h2, h3, h4, h5, h6, p {
+   margin-top: 0;
+}
+
+/* no list-markers by default, since lists are used more often for semantics */
+ul, ol {
+  list-style: none;
+}
